@@ -1,6 +1,56 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# BrandColors-ReactJS
+
+A react web application that you can access the main colors used by many famous brands from a single address, copy the HEX codes of these colors or download them as a css file and include them in your project.
+
+This web application was inspired by the site [BrandColors](https://brandcolors.net) and built from scratch.
+
+[**Go Live**](https://burakkrt-brand-colors.netlify.app)
+## Technologies used and dependencies
+
+- [**ReactJS**](https://reactjs.org) 18.2.0
+- [**Sass Scss**](https://sass-lang.com) 1.58.0
+
+## React Components
+
+-   React Copy to Clipboard 5.1.0
+-   React DOM 18.2.0
+-   React Icon 1.0.0
+-   React Icons 4.7.1
+-   React Lazy Load 4.0.1
+-   React Modal 3.16.1
+-   React Router Dom 6.8.1
+-   React Scripts 5.0.1
+## Run it on your PC
+
+Clone the project
+
+```bash
+  git clone https://github.com/burakkrt/BrandColors-ReactJS.git
+```
+
+Go to the project directory
+
+```bash
+  cd BrandColors-ReactJS
+```
+
+Download dependencies
+
+```bash
+  npm install
+```
+
+Run the React app
+
+```bash
+  npm start
+```
+## Screen Shot
+
+https://user-images.githubusercontent.com/99482906/225359378-ba7b6544-77b6-4c3a-a850-a668e44a8b1b.mp4
+
+## Additional info for React app
 
 ## Available Scripts
 
