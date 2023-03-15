@@ -12,6 +12,7 @@ export default function Collection() {
 
   useEffect(() => {
     setSelectedBrands(slugs.split(","));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

@@ -6,7 +6,7 @@ import BrandsData from "./Components/brands.json";
 import Copied from "./Components/Copied";
 import Collection from "./Components/Collection";
 // Router
-import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
   const brandsArray = [];
