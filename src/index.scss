@@ -1,0 +1,279 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: 0;
+  list-style-type: none;
+  text-decoration: none;
+  outline: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+#root {
+  display: flex;
+  height: 100%;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.sidebar {
+  width: 320px;
+  min-width: 320px;
+  border-right: 1px solid #ccc;
+  padding: 25px;
+  .logo {
+    margin-bottom: 25px;
+    a {
+      font-size: 30px;
+    }
+  }
+  .description {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #999;
+    margin-bottom: 25px;
+  }
+  .menu {
+    ul {
+      li {
+        a {
+          display: block;
+          font-weight: 600;
+          color: #333;
+          cursor: pointer;
+          transition-duration: 200ms;
+          &:hover {
+            color: #0099e5;
+          }
+        }
+      }
+    }
+  }
+  .download {
+    margin-top: 25px;
+    padding: 8px 16px;
+    border-radius: 5px;
+    border: 1px solid rgba(#000, 0.3);
+    box-shadow: -8px 0 2px rgba(#000, 0.8);
+    .download-item {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      margin: 8px 0;
+      cursor: pointer;
+      transition-duration: 100ms;
+
+      a {
+        color: inherit;
+        svg {
+          margin-left: 4px;
+          width: 18px;
+          height: 18px;
+        }
+      }
+
+      &:hover {
+        color: red;
+      }
+      label {
+        cursor: pointer;
+      }
+    }
+    .selected {
+    }
+    .action-button {
+      background-color: transparent;
+      border: none;
+      margin: 0 10px 0 4px;
+      cursor: pointer;
+
+      svg {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+}
+
+.content {
+  flex: 1;
+  overflow: auto;
+  background: #f8f8f8;
+  .header {
+    z-index: 9;
+    position: relative;
+    width: 90%;
+    height: 60px;
+    position: sticky;
+    top: 0;
+    .search {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      .icon {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 60px;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        svg {
+          width: 20px;
+          height: 20px;
+          color: #eeeeee;
+        }
+      }
+      input {
+        width: 100%;
+        height: 100%;
+        font-size: 16px;
+        padding: 0 20px 0 48px;
+        border: none;
+        box-shadow: 0 2px 2px rgba(#000, 0.3);
+      }
+    }
+  }
+
+  .brands {
+    padding: 25px;
+    .brand {
+      border: 1px solid #ddd;
+      background: #fff;
+      padding: 15px;
+      margin-bottom: 10px;
+      &.selected {
+        border-color: red;
+        .brand-colors {
+          span {
+            flex: 1;
+            text-indent: 0;
+          }
+        }
+      }
+      h5 {
+        font-size: 18px;
+        margin-bottom: 8px;
+        cursor: pointer;
+      }
+      &-colors {
+        display: flex;
+        span {
+          width: 70px;
+          background: var(--bgColor);
+          text-indent: -9999px;
+          height: 40px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 16px;
+          color: var(--textColor);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.copied {
+  position: fixed;
+  z-index: 9999;
+  bottom: 32px;
+  right: 32px;
+  padding: 15px 25px;
+  border-radius: 4px;
+  font-size: 16px;
+  box-shadow: 0 0 5px rgba(#000, 0.5);
+  color: var(--textColor);
+  background-color: var(--bgCopied);
+  .copied-hex {
+    color: var(--copiedHex);
+  }
+}
+
+.about-modal {
+  position: relative;
+  max-width: 720px;
+  background-color: #fff;
+  box-shadow: 0 0 7px 0 rgba(#000, 0.4);
+  border-radius: 16px;
+  padding: 40px;
+  h3 {
+    font-size: 26px;
+    margin-bottom: 25px;
+  }
+  p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+  }
+  .modal-close-btn {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    top: 28px;
+    right: 28px;
+    width: 36px;
+    height: 36px;
+    background-color: rgba(#ddd, 0.4);
+    box-shadow: 0 0 3px rgba(#000, 0.3);
+    border: 1px solid rgba(#000, 0.3);
+    border-radius: 50%;
+    transition-duration: 250ms;
+    cursor: pointer;
+    &:hover {
+      box-shadow: 0 0 7px rgba(#000, 0.5);
+      background-color: rgba(#ddd, 0.8);
+    }
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+.about-modal-overlay {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(#fff, 0.7);
+}
+
+.LazyLoad {
+  opacity: 0;
+  filter: grayscale(100%);
+  transition: filter 500ms 150ms ease-in-out, opacity 500ms ease-in-out;
+}
+
+.is-visible {
+  opacity: 1;
+  filter: grayscale(0%);
+}
