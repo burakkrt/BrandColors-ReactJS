@@ -54,7 +54,6 @@ https://user-images.githubusercontent.com/99482906/225359378-ba7b6544-77b6-4c3a-
 
 ## Available Scripts
 
-In the project directory, you can run:
 
 ### `npm start`
 
