@@ -18,7 +18,7 @@ export default function Download() {
     if (selectedBrands.length > 0) {
       let output = "";
       output +=
-        "/* Visit us for the colors of the best brands.\nhttp://localhost:3000*/\n\nroot{\n";
+        "/* Visit us for the colors of the best brands.\nhttps://burakkrt-brand-colors.netlify.app*/\n\nroot{\n";
       // eslint-disable-next-line array-callback-return
       selectedBrands.map((slug) => {
         let brand = brands.find((brand) => brand.slug === slug);
@@ -43,7 +43,9 @@ export default function Download() {
     if (selectedBrands.length > 0) {
       prompt(
         "Here's the URL to share",
-        `http://localhost:3000/collection/${selectedBrands.join(",")}`
+        `https://burakkrt-brand-colors.netlify.app/collection/${selectedBrands.join(
+          ","
+        )}`
       );
     } else {
       alert("Please choose brand");
@@ -73,7 +75,7 @@ export default function Download() {
       <div className="download-item">
         <a
           href={selectedBrands.length > 0 ? downloadURL : null}
-          download="test.css"
+          download="brand-colors.css"
         >
           <FcDownload style={{ marginRight: "5px" }} /> Selected brands download
         </a>
